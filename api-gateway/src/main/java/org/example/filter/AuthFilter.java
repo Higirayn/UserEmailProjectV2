@@ -50,3 +50,4 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config>{
 
 
 //localhost:8087/api/
+pirivet sasa
