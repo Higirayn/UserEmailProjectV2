@@ -49,4 +49,4 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config>{
 }
 
 
-localhost:8087/api/
+//localhost:8087/api/
