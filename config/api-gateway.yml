@@ -1,0 +1,33 @@
+jwt:
+  secret: 4ec72a9dc2e8be0b83176bc1d268ff7f87b0eb05930d8c362afb12a32360e98d
+server:
+  port: 8083
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+spring:
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: security-module
+             # uri: http://localhost:8089
+              uri: lb://SECURITY-MODULE
+              predicates:
+                - Path=/auth/**
+              filters:
+                - AuthFilter
+  #      gateway:
+#        mvc:
+#          routes:
+#            - id: security-module
+#              uri: http://localhost:8089
+#              predicates:
+#                - Path=/auth/**
+#              filters:
+#                - AuthFilter

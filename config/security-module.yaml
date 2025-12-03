@@ -1,0 +1,18 @@
+jwt:
+  secret: 4ec72a9dc2e8be0b83176bc1d268ff7f87b0eb05930d8c362afb12a32360e98d
+spring:
+  application:
+    name: security-module
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank
+    username: bank
+    password: bank
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8089
